@@ -128,7 +128,9 @@ export default function Navbar() {
         </div>
 
         <a
-          href={profile.links.email ? `mailto:${profile.links.email}` : '#contact'}
+          href={profile.links.whatsapp}
+          target="_blank"
+          rel="noreferrer"
           className="group hidden items-center gap-2 rounded-full border border-line-strong bg-white/[0.05] px-4 py-2 text-xs font-medium text-ink transition-colors hover:border-accent/40 hover:bg-white/[0.09] lg:inline-flex"
         >
           Let&apos;s Talk
@@ -174,9 +176,9 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href={
-                  profile.links.email ? `mailto:${profile.links.email}` : '#contact'
-                }
+                href={profile.links.whatsapp}
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => setOpen(false)}
                 className="mt-3 inline-flex items-center justify-center rounded-full border border-line-strong bg-white/[0.05] px-4 py-3 text-sm font-medium text-ink transition-colors hover:border-accent/40 hover:bg-white/[0.09]"
               >
