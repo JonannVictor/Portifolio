@@ -9,18 +9,26 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
   const featured = project.featured
 
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.6, ease: EASE }}
-      className={cn(
-        'overflow-hidden rounded-2xl border bg-base-panel/80 backdrop-blur-xl',
-        featured
-          ? 'border-accent/25 shadow-[0_30px_90px_-20px_rgba(76,130,251,0.28)]'
-          : 'border-line shadow-panel'
+    <div className="relative">
+      {featured && (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-accent/10 blur-3xl sm:-inset-10"
+        />
       )}
-    >
+
+      <motion.article
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.6, ease: EASE }}
+        className={cn(
+          'overflow-hidden rounded-2xl border bg-base-panel/80 backdrop-blur-xl',
+          featured
+            ? 'border-accent/25 shadow-[0_30px_90px_-20px_rgba(76,130,251,0.28)]'
+            : 'border-line shadow-panel'
+        )}
+      >
       <div
         className={cn(
           'flex flex-wrap items-start justify-between gap-4 border-b border-line',
@@ -49,6 +57,9 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
           >
             {project.tagline}
           </p>
+          <p className="mt-2 font-mono text-xs tracking-wide text-ink-faint">
+            My Role — <span className="text-ink-muted">{project.role}</span>
+          </p>
         </div>
 
         <div className="flex shrink-0 gap-3">
@@ -57,7 +68,7 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
               href={project.links.github}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-xs font-medium text-ink transition-colors hover:border-line-strong hover:bg-white/[0.03]"
+              className="group inline-flex items-center gap-2 rounded-full border border-line-strong bg-white/[0.05] px-4 py-2 text-xs font-medium text-ink transition-colors hover:border-accent/40 hover:bg-white/[0.09]"
             >
               <Github className="h-3.5 w-3.5" strokeWidth={2} />
               Code
@@ -68,7 +79,7 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
               href={project.links.demo}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-xs font-medium text-base transition-colors hover:bg-ink/90"
+              className="group inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-xs font-medium text-base shadow-[0_6px_20px_-6px_rgba(76,130,251,0.45)] transition-colors hover:bg-ink/90"
             >
               <ExternalLink className="h-3.5 w-3.5" strokeWidth={2} />
               Live Demo
@@ -117,7 +128,7 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
           {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-line bg-white/[0.03] px-2.5 py-0.5 font-mono text-[10px] leading-[1.6] tracking-wide text-ink-faint"
+              className="rounded-full border border-line bg-white/[0.03] px-2 py-0.5 font-mono text-[10px] leading-none tracking-wide text-ink-faint"
             >
               {tech}
             </span>
@@ -149,6 +160,7 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
           ))}
         </ul>
       </div>
-    </motion.article>
+      </motion.article>
+    </div>
   )
 }
