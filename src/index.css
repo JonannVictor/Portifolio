@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-base text-ink font-display antialiased;
+    font-feature-settings: 'ss01' 1;
+  }
+
+  ::selection {
+    background: rgba(76, 130, 251, 0.35);
+    color: #f5f6f7;
+  }
+
+  :focus-visible {
+    outline: 2px solid #4c82fb;
+    outline-offset: 3px;
+  }
+}
