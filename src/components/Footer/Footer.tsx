@@ -8,7 +8,11 @@ const EASE = [0.16, 1, 0.3, 1] as const
 const socials = [
   { label: 'GitHub', href: profile.links.github, icon: Github },
   { label: 'LinkedIn', href: profile.links.linkedin, icon: Linkedin },
-  { label: 'Email', href: `mailto:${profile.links.email}`, icon: Mail },
+  {
+    label: 'Email',
+    href: `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.links.email}`,
+    icon: Mail,
+  },
 ]
 
 export default function Footer() {
