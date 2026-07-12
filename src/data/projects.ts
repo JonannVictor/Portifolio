@@ -103,4 +103,37 @@ export const projects: CaseStudy[] = [
       demo: 'https://www.drophouse.shop/',
     },
   },
+  {
+    slug: 'jarvis-trader',
+    name: 'Jarvis Trader',
+    tagline: 'Autonomous crypto trading bot with adaptive risk management.',
+    platform: 'web',
+    role: 'Solo Full-Stack Developer',
+    goal:
+      'Manual crypto trading requires constant attention to market conditions, the discipline to cut risk during losing streaks, and the ability to react in seconds — three things that do not scale when a single person is doing all of it by hand.',
+    solution:
+      'Built an autonomous trading bot with a modular architecture that separates market detection, AI-based entry and exit scoring, and risk management, driven by a self-adjusting risk engine that raises its entry threshold and tightens position sizing automatically after losing streaks. Paired it with a real-time React dashboard polling a Node/Express API to visualize live P&L, trade history, and profit projections — turning a strategy that once demanded constant manual attention into a system that runs, adapts, and reports on itself.',
+    techStack: [
+      'Node.js',
+      'Express',
+      'CCXT',
+      'Supabase',
+      'React',
+      'Vite',
+      'Tailwind CSS',
+      'Recharts',
+      'Framer Motion',
+    ],
+    keyFeatures: [
+      'Modular bot architecture separating market detection, AI scoring, risk, and strategy',
+      'Adaptive risk engine that tightens thresholds after losing streaks',
+      'Real-time dashboard with live P&L and trade history',
+      'Profit projection visualization',
+      'Persistent trade state and dataset via Supabase',
+      'Exchange connectivity via CCXT',
+    ],
+    links: {
+      github: 'https://github.com/JonannVictor/IA-Jarvs-trader',
+    },
+  },
 ]
