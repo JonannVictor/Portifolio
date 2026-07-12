@@ -36,7 +36,7 @@ export default function CodePanel() {
       initial={{ opacity: 0, scale: 0.96, y: 16 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-      className="relative mx-auto w-full max-w-md"
+      className="relative mx-auto w-full max-w-lg"
     >
       {/* Janela do editor */}
       <div className="overflow-hidden rounded-2xl border border-line bg-base-panel/80 shadow-panel backdrop-blur-xl">

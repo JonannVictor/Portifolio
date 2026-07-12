@@ -12,10 +12,10 @@ export default function HeroBackground() {
         }}
       />
 
-      {/* Glow azul suave, atrás do painel de código */}
+      {/* Glow azul suave, ligando o painel de código ao texto */}
       <div
-        className="absolute right-[-10%] top-[12%] h-[520px] w-[520px] rounded-full blur-[120px]"
-        style={{ background: 'rgba(76, 130, 251, 0.16)' }}
+        className="absolute right-[-6%] top-[10%] h-[600px] w-[600px] rounded-full blur-[130px]"
+        style={{ background: 'rgba(76, 130, 251, 0.18)' }}
       />
 
       {/* Vinheta leve pra ancorar o conteúdo no centro */}
