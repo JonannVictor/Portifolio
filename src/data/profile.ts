@@ -9,7 +9,8 @@ export const profile = {
     github: 'https://github.com/JonannVictor',
     linkedin:
       'https://www.linkedin.com/in/jonann-victor-moreira-cardoso-554137285/',
-    email: 'jonannmoreiravc@gmail.com',
+    email: 'atendimento@hineni.agency',
+    whatsapp: 'https://wa.me/5551989100198',
   },
 } as const
 

@@ -40,7 +40,9 @@ export default function Footer() {
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <motion.a
-              href={`mailto:${profile.links.email}`}
+              href={profile.links.whatsapp}
+              target="_blank"
+              rel="noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-base shadow-[0_8px_30px_-8px_rgba(76,130,251,0.35)] transition-colors hover:bg-ink/90"
