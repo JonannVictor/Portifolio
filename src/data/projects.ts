@@ -87,6 +87,8 @@ export const projects: CaseStudy[] = [
       'Server-side services via Supabase',
       'Cloud deployment with application analytics',
     ],
-    links: {},
+    links: {
+      demo: 'https://www.drophouse.shop/',
+    },
   },
 ]
