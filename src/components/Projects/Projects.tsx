@@ -25,7 +25,7 @@ export default function Projects() {
           </h2>
         </motion.div>
 
-        <div className="mt-12 space-y-8">
+        <div className="mt-14 space-y-10">
           {projects.map((project) => (
             <ProjectCase key={project.slug} project={project} />
           ))}
