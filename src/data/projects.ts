@@ -3,6 +3,8 @@ export type CaseStudy = {
   name: string
   tagline: string
   featured?: boolean
+  image?: string
+  platform?: 'web' | 'mobile'
   role: string
   goal: string
   solution: string
@@ -20,6 +22,7 @@ export const projects: CaseStudy[] = [
     name: 'MedFlow',
     tagline: 'Digital healthcare platform connecting patients and professionals.',
     featured: true,
+    platform: 'mobile',
     role: 'Solo Full-Stack Developer',
     goal:
       'Patients and healthcare professionals lacked a single platform to discover each other, schedule consultations, and handle payments — usually requiring separate tools for booking, communication, and billing.',
@@ -51,6 +54,7 @@ export const projects: CaseStudy[] = [
     slug: 'vivamart',
     name: 'VivaMart',
     tagline: 'A modern marketplace experience built with vanilla JavaScript.',
+    platform: 'web',
     role: 'Solo Frontend Developer',
     goal:
       'Wanted to demonstrate that a fully-featured, modern e-commerce experience — search, filtering, cart, multi-step checkout, and recommendations — could be delivered without relying on a front-end framework.',
@@ -81,6 +85,7 @@ export const projects: CaseStudy[] = [
     slug: 'drophouse',
     name: 'DropHouse',
     tagline: 'Full-stack e-commerce platform for a premium streetwear brand.',
+    platform: 'web',
     role: 'Full-Stack Developer at Agência Hineni',
     goal:
       'A premium streetwear business needed a modern, conversion-focused e-commerce platform combining product discovery, checkout, and payments into a single full-stack product rather than off-the-shelf storefront tools.',

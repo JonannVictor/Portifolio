@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { CheckCircle2, ExternalLink, Github } from 'lucide-react'
 import type { CaseStudy } from '@/data/projects'
 import { cn } from '@/lib/cn'
+import BrowserMockup from './BrowserMockup'
+import PhoneMockup from './PhoneMockup'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -64,43 +66,68 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
 
         <div className="flex shrink-0 gap-3">
           {project.links.github && (
-            <a
+            <motion.a
               href={project.links.github}
               target="_blank"
               rel="noreferrer"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
               className="group inline-flex items-center gap-2 rounded-full border border-line-strong bg-white/[0.05] px-4 py-2 text-xs font-medium text-ink transition-colors hover:border-accent/40 hover:bg-white/[0.09]"
             >
-              <Github className="h-3.5 w-3.5" strokeWidth={2} />
+              <Github
+                className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-rotate-12"
+                strokeWidth={2}
+              />
               Code
-            </a>
+            </motion.a>
           )}
           {project.links.demo && (
-            <a
+            <motion.a
               href={project.links.demo}
               target="_blank"
               rel="noreferrer"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
               className="group inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-xs font-medium text-base shadow-[0_6px_20px_-6px_rgba(76,130,251,0.45)] transition-colors hover:bg-ink/90"
             >
-              <ExternalLink className="h-3.5 w-3.5" strokeWidth={2} />
+              <ExternalLink
+                className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                strokeWidth={2}
+              />
               Live Demo
-            </a>
+            </motion.a>
           )}
         </div>
       </div>
+
+      {project.image && (
+        <div
+          className={cn(
+            'border-b border-line bg-base/40',
+            featured ? 'px-7 py-8 sm:px-10 sm:py-10' : 'px-6 py-6 sm:px-8 sm:py-8'
+          )}
+        >
+          {project.platform === 'mobile' ? (
+            <PhoneMockup src={project.image} alt={project.name} />
+          ) : (
+            <BrowserMockup src={project.image} alt={project.name} />
+          )}
+        </div>
+      )}
 
       <div
         className={cn(
           'grid sm:grid-cols-2',
           featured
-            ? 'gap-10 px-7 py-8 sm:px-10 sm:py-10'
-            : 'gap-8 px-6 py-6 sm:px-8 sm:py-8'
+            ? 'gap-12 px-7 py-9 sm:px-10 sm:py-12'
+            : 'gap-9 px-6 py-7 sm:px-8 sm:py-9'
         )}
       >
         <div>
           <p className="font-mono text-xs uppercase tracking-wide text-accent">
             Goal
           </p>
-          <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+          <p className="mt-3 text-sm leading-relaxed text-ink-muted">
             {project.goal}
           </p>
         </div>
@@ -109,7 +136,7 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
           <p className="font-mono text-xs uppercase tracking-wide text-accent">
             Solution
           </p>
-          <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+          <p className="mt-3 text-sm leading-relaxed text-ink-muted">
             {project.solution}
           </p>
         </div>
@@ -118,13 +145,13 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
       <div
         className={cn(
           'border-t border-line',
-          featured ? 'px-7 py-8 sm:px-10 sm:py-10' : 'px-6 py-6 sm:px-8 sm:py-8'
+          featured ? 'px-7 py-9 sm:px-10 sm:py-11' : 'px-6 py-7 sm:px-8 sm:py-9'
         )}
       >
         <p className="font-mono text-xs uppercase tracking-wide text-accent">
           Tech Stack
         </p>
-        <div className="mt-4 flex flex-wrap gap-1.5">
+        <div className="mt-5 flex flex-wrap gap-1.5">
           {project.techStack.map((tech) => (
             <span
               key={tech}
@@ -139,13 +166,13 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
       <div
         className={cn(
           'border-t border-line',
-          featured ? 'px-7 py-8 sm:px-10 sm:py-10' : 'px-6 py-6 sm:px-8 sm:py-8'
+          featured ? 'px-7 py-9 sm:px-10 sm:py-11' : 'px-6 py-7 sm:px-8 sm:py-9'
         )}
       >
         <p className="font-mono text-xs uppercase tracking-wide text-accent">
           Key Features
         </p>
-        <ul className="mt-4 space-y-2.5">
+        <ul className="mt-5 space-y-3">
           {project.keyFeatures.map((feature) => (
             <li
               key={feature}
