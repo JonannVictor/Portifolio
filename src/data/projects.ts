@@ -74,6 +74,7 @@ export const projects: CaseStudy[] = [
     ],
     links: {
       github: 'https://github.com/JonannVictor/Loja-Ficticia',
+      demo: 'https://jonannvictor.github.io/Loja-Ficticia/',
     },
   },
   {
