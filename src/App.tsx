@@ -1,12 +1,13 @@
 import Hero from '@/components/Hero'
+import Projects from '@/components/Projects'
 
 // V2 do portfolio — construção por etapas.
-// Por enquanto, apenas a Hero Section está sendo desenvolvida.
-// Próximas seções (Navbar, About, Projects, Footer) entram aqui depois.
+// Próximas seções (Navbar, About, Footer) entram aqui depois.
 function App() {
   return (
     <main className="bg-base">
       <Hero />
+      <Projects />
     </main>
   )
 }
