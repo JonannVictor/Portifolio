@@ -11,7 +11,15 @@ export default function BrowserMockup({ src, alt }: { src: string; alt: string }
           {alt}
         </span>
       </div>
-      <img src={src} alt={alt} className="w-full" />
+      <div className="overflow-hidden">
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          decoding="async"
+          className="w-full transition-transform duration-500 ease-out hover:scale-[1.03]"
+        />
+      </div>
     </div>
   )
 }

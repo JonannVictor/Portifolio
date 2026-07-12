@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Download } from 'lucide-react'
 import { heroHeadline, profile } from '@/data/profile'
 import { cn } from '@/lib/cn'
+import { withBase } from '@/lib/url'
 import HeroBackground from './HeroBackground'
 import CodePanel from './CodePanel'
 
@@ -86,7 +87,7 @@ export default function Hero() {
             </motion.a>
 
             <motion.a
-              href={profile.resumeUrl}
+              href={withBase(profile.resumeUrl)}
               download
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

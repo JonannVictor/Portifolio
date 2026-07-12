@@ -79,9 +79,15 @@ export default function Process() {
           className="relative mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4"
         >
           {steps.map((step, i) => (
-            <motion.div key={step.title} variants={item} className="relative">
-              <div className="h-full rounded-2xl border border-line bg-base-panel/60 p-6 backdrop-blur-sm">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
+            <motion.div
+              key={step.title}
+              variants={item}
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.3, ease: EASE }}
+              className="group relative"
+            >
+              <div className="h-full rounded-2xl border border-line bg-base-panel/60 p-6 backdrop-blur-sm transition-colors duration-300 group-hover:border-accent/30">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent transition-transform duration-300 group-hover:scale-110">
                   <step.icon className="h-5 w-5" strokeWidth={2} />
                 </div>
                 <h3 className="mt-4 font-display text-lg font-bold text-ink">

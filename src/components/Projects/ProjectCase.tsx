@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { CheckCircle2, ExternalLink, Github } from 'lucide-react'
 import type { CaseStudy } from '@/data/projects'
 import { cn } from '@/lib/cn'
+import { withBase } from '@/lib/url'
 import BrowserMockup from './BrowserMockup'
 import PhoneMockup from './PhoneMockup'
 
@@ -22,13 +23,14 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
       <motion.article
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
+        whileHover={{ y: -4 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.6, ease: EASE }}
         className={cn(
-          'overflow-hidden rounded-2xl border bg-base-panel/80 backdrop-blur-xl',
+          'overflow-hidden rounded-2xl border bg-base-panel/80 backdrop-blur-xl transition-shadow duration-300',
           featured
-            ? 'border-accent/25 shadow-[0_30px_90px_-20px_rgba(76,130,251,0.28)]'
-            : 'border-line shadow-panel'
+            ? 'border-accent/25 shadow-[0_30px_90px_-20px_rgba(76,130,251,0.28)] hover:shadow-[0_36px_110px_-20px_rgba(76,130,251,0.38)]'
+            : 'border-line shadow-panel hover:shadow-[0_36px_100px_-20px_rgba(0,0,0,0.55)]'
         )}
       >
       <div
@@ -108,9 +110,9 @@ export default function ProjectCase({ project }: { project: CaseStudy }) {
           )}
         >
           {project.platform === 'mobile' ? (
-            <PhoneMockup src={project.image} alt={project.name} />
+            <PhoneMockup src={withBase(project.image)} alt={project.name} />
           ) : (
-            <BrowserMockup src={project.image} alt={project.name} />
+            <BrowserMockup src={withBase(project.image)} alt={project.name} />
           )}
         </div>
       )}
