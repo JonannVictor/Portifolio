@@ -25,9 +25,9 @@ export const projects: CaseStudy[] = [
     platform: 'mobile',
     role: 'Solo Full-Stack Developer',
     goal:
-      'Patients and healthcare professionals lacked a single platform to discover each other, schedule consultations, and handle payments — usually requiring separate tools for booking, communication, and billing.',
+      'Patients and healthcare professionals had no single place to connect — booking, communicating, and paying for consultations meant juggling phone calls, spreadsheets, and separate payment tools, creating friction for patients and administrative overhead for providers.',
     solution:
-      'Built a mobile-first healthcare platform with dedicated patient and professional journeys, real-time availability with conflict-free scheduling, persistent authentication, and secure role-based data access enforced with Row Level Security, plus integrated payments via Mercado Pago.',
+      "As the sole developer, I designed and built a mobile-first platform with dedicated patient and professional journeys: real-time, conflict-free appointment scheduling, persistent authentication, and role-based data access enforced with Row Level Security, plus integrated payments via Mercado Pago. The result is a single app where a patient can find a provider, book a slot, and pay in minutes — replacing a patchwork of disconnected tools with one secure, production-ready system.",
     techStack: [
       'React Native',
       'Expo',
@@ -57,9 +57,9 @@ export const projects: CaseStudy[] = [
     platform: 'web',
     role: 'Solo Frontend Developer',
     goal:
-      'Wanted to demonstrate that a fully-featured, modern e-commerce experience — search, filtering, cart, multi-step checkout, and recommendations — could be delivered without relying on a front-end framework.',
+      'Most modern e-commerce experiences — search, filtering, cart, multi-step checkout, personalized recommendations — are built on top of heavy frameworks. The challenge was proving that same level of polish could be delivered with nothing but the language the browser already understands.',
     solution:
-      'Built VivaMart from scratch with HTML, CSS, and vanilla JavaScript, using a modular architecture, hash-based routing, and localStorage-backed state to power product discovery, favorites, cart, checkout, and personalized recommendations, with full PT/EN localization and light/dark themes.',
+      'Built entirely from scratch with HTML, CSS, and vanilla JavaScript, using a modular architecture, hash-based routing, and localStorage-backed state to power product discovery, favorites, cart, checkout, and recommendations — with full PT/EN localization and light/dark themes. The result is a fast, dependency-free marketplace that proves strong UX and clean architecture do not require a framework.',
     techStack: [
       'JavaScript',
       'HTML',
@@ -88,9 +88,9 @@ export const projects: CaseStudy[] = [
     platform: 'web',
     role: 'Full-Stack Developer at Agência Hineni',
     goal:
-      'A premium streetwear business needed a modern, conversion-focused e-commerce platform combining product discovery, checkout, and payments into a single full-stack product rather than off-the-shelf storefront tools.',
+      'A premium streetwear brand needed to sell online but had no digital presence beyond social media — no storefront, no checkout, and no way to accept payments or manage products without handing a cut of every sale to a third-party marketplace.',
     solution:
-      'Built a full-stack e-commerce platform with Next.js and TypeScript, using Supabase for backend and data services and Mercado Pago for payments, with a focus on conversion-driven UX, cloud deployment, and analytics. Built as an associate at Agência Hineni.',
+      'Built a full-stack e-commerce platform with Next.js and TypeScript, using Supabase for backend and data services and Mercado Pago for payments, with a focus on conversion-driven UX, cloud deployment, and analytics. The brand now owns its entire sales channel — from product discovery to checkout — with a fast, SEO-ready storefront live in production.',
     techStack: ['Next.js', 'React', 'TypeScript', 'Supabase', 'Mercado Pago'],
     keyFeatures: [
       'Conversion-focused product discovery and browsing experience',
