@@ -51,6 +51,30 @@ export const projects: CaseStudy[] = [
     links: {},
   },
   {
+    slug: 'devclub',
+    name: 'DevClub',
+    tagline: 'Marketing site for an online web development bootcamp.',
+    image: 'projects/devclub.jpg',
+    platform: 'web',
+    role: 'Solo Frontend Developer',
+    goal:
+      'A bootcamp landing page has to earn trust fast while covering a lot of ground — curriculum, real projects, community, mentorship, career support, guarantees — without turning into an overwhelming wall of text that makes visitors bounce before they enroll.',
+    solution:
+      'Built a scroll-driven marketing site with an animated hero reveal, a curriculum explorer across Front-end, Back-end, and Full Stack tracks, a frame-by-frame scroll narrative walking through real student projects from code to deploy, instructor profiles, testimonials, FAQ, and a risk-free guarantee section — using React and Framer Motion to keep dozens of sections feeling like one cohesive, premium product instead of a cluttered sales page.',
+    techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+    keyFeatures: [
+      'Animated hero reveal and scroll-linked storytelling',
+      'Curriculum explorer across multiple learning tracks',
+      '"Code to deploy" scroll narrative for real student projects',
+      'Instructor and testimonial sections',
+      'Risk-free guarantee and FAQ sections',
+      'Fully responsive, dark-themed design',
+    ],
+    links: {
+      demo: 'https://devclub-vert.vercel.app/',
+    },
+  },
+  {
     slug: 'vivamart',
     name: 'VivaMart',
     tagline: 'A modern marketplace experience built with vanilla JavaScript.',
@@ -183,30 +207,6 @@ export const projects: CaseStudy[] = [
     ],
     links: {
       demo: 'https://modelo.hineni.agency/',
-    },
-  },
-  {
-    slug: 'devclub',
-    name: 'DevClub',
-    tagline: 'Marketing site for an online web development bootcamp.',
-    image: 'projects/devclub.jpg',
-    platform: 'web',
-    role: 'Solo Frontend Developer',
-    goal:
-      'A bootcamp landing page has to earn trust fast while covering a lot of ground — curriculum, real projects, community, mentorship, career support, guarantees — without turning into an overwhelming wall of text that makes visitors bounce before they enroll.',
-    solution:
-      'Built a scroll-driven marketing site with an animated hero reveal, a curriculum explorer across Front-end, Back-end, and Full Stack tracks, a frame-by-frame scroll narrative walking through real student projects from code to deploy, instructor profiles, testimonials, FAQ, and a risk-free guarantee section — using React and Framer Motion to keep dozens of sections feeling like one cohesive, premium product instead of a cluttered sales page.',
-    techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
-    keyFeatures: [
-      'Animated hero reveal and scroll-linked storytelling',
-      'Curriculum explorer across multiple learning tracks',
-      '"Code to deploy" scroll narrative for real student projects',
-      'Instructor and testimonial sections',
-      'Risk-free guarantee and FAQ sections',
-      'Fully responsive, dark-themed design',
-    ],
-    links: {
-      demo: 'https://devclub-vert.vercel.app/',
     },
   },
 ]
