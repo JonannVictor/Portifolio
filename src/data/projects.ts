@@ -136,4 +136,49 @@ export const projects: CaseStudy[] = [
       github: 'https://github.com/JonannVictor/IA-Jarvs-trader',
     },
   },
+  {
+    slug: 'hineni',
+    name: 'Hineni',
+    tagline: 'Agency website and client acquisition funnel for my own studio.',
+    platform: 'web',
+    role: 'Founder & Full-Stack Developer',
+    goal:
+      'Growing businesses need a website, social media, and paid campaigns to work together, but usually end up piecing them together from different freelancers and tools that were never designed to talk to each other.',
+    solution:
+      "Designed and built Hineni's own site as both the agency's storefront and its lead-generation funnel: service pages, a free strategic diagnosis flow, and a clear four-stage process, shipped on Next.js and deployed on Vercel for speed and reliability. The site doubles as a live demonstration of the same technical quality the agency sells to clients — it is the primary channel bringing in new business nationally.",
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+    keyFeatures: [
+      'Free strategic diagnosis funnel for lead generation',
+      'Service pages for web development, social media, and paid ads',
+      'Four-stage engagement process: diagnosis, structuring, execution, growth',
+      'Remote service delivery across Brazil',
+      'Deployed on Vercel with Next.js for fast, reliable delivery',
+    ],
+    links: {
+      demo: 'https://hineni.agency/',
+    },
+  },
+  {
+    slug: 'studio97',
+    name: 'Studio 97',
+    tagline: 'Premium landing page template for barbershops, built at Hineni.',
+    platform: 'web',
+    role: 'Full-Stack Developer at Hineni',
+    goal:
+      'Local barbershops typically rely on Instagram DMs and phone calls to book clients, losing customers who just want to see prices and services and book a time slot without waiting for a reply.',
+    solution:
+      'Built a premium, conversion-focused landing page template: a service menu with pricing, a gallery of the space and work, customer testimonials, and a one-tap WhatsApp booking button with embedded Google Maps directions — packaged as a reusable template for Hineni\'s barbershop and grooming clients. The result turns a site visit into a booked appointment in a single tap, with no site management required from the owner.',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'WhatsApp API', 'Google Maps'],
+    keyFeatures: [
+      'Service menu with transparent pricing',
+      'Photo gallery of the space and finished work',
+      'Customer testimonials',
+      'One-tap WhatsApp booking call-to-action',
+      'Embedded Google Maps directions',
+      'Fully responsive, mobile-first design',
+    ],
+    links: {
+      demo: 'https://modelo.hineni.agency/',
+    },
+  },
 ]
