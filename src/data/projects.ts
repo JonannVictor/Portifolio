@@ -54,6 +54,7 @@ export const projects: CaseStudy[] = [
     slug: 'vivamart',
     name: 'VivaMart',
     tagline: 'A modern marketplace experience built with vanilla JavaScript.',
+    image: 'projects/vivamart.jpg',
     platform: 'web',
     role: 'Solo Frontend Developer',
     goal:
@@ -85,6 +86,7 @@ export const projects: CaseStudy[] = [
     slug: 'drophouse',
     name: 'DropHouse',
     tagline: 'Full-stack e-commerce platform for a premium streetwear brand.',
+    image: 'projects/drophouse.jpg',
     platform: 'web',
     role: 'Full-Stack Developer at Agência Hineni',
     goal:
@@ -140,6 +142,7 @@ export const projects: CaseStudy[] = [
     slug: 'hineni',
     name: 'Hineni',
     tagline: 'Agency website and client acquisition funnel for my own studio.',
+    image: 'projects/hineni.jpg',
     platform: 'web',
     role: 'Founder & Full-Stack Developer',
     goal:
@@ -162,6 +165,7 @@ export const projects: CaseStudy[] = [
     slug: 'studio97',
     name: 'Studio 97',
     tagline: 'Premium landing page template for barbershops, built at Hineni.',
+    image: 'projects/studio97.jpg',
     platform: 'web',
     role: 'Full-Stack Developer at Hineni',
     goal:
